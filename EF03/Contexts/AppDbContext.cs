@@ -23,8 +23,8 @@ namespace EF03.Contexts
             optionsBuilder.UseSqlServer("Server = . ; Database = DBG04 ; Trusted_Connection = True ; TrustServerCertificate = True ");
         }
 
-        DbSet<Employee> Employees { get; set; }  
+        public DbSet<Employee> Employees { get; set; }  
 
-        DbSet<Department> Departments { get; set; }
+        public DbSet<Department> Departments { get; set; }
     }
 }
