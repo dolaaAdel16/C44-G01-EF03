@@ -47,7 +47,7 @@ namespace EF03.Migrations
                         principalTable: "Departments",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                });
+                }); 
 
             migrationBuilder.CreateIndex(
                 name: "IX_Employees_DeptId",
