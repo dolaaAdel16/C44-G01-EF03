@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace EF03.Models
 {
-    internal class Department
+    public class Department
     {
         public int Id { get; set; }
         public string Name { get; set; }
         
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;  
 
-        public List<Employee> Employees { get; set; }
+        public virtual List<Employee> Employees { get; set; }
     }
 }

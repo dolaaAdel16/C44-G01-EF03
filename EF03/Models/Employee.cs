@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EF03.Models
 {
-    internal class Employee
+    public class Employee
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -16,6 +16,6 @@ namespace EF03.Models
         public DateTime HiringDate { get; set; } = DateTime.UtcNow;
 
         public int DeptId { get; set; }  
-        public Department WorkFor { get; set; }
+        public virtual Department WorkFor { get; set; }
     }
 }
