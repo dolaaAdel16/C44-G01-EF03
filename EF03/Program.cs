@@ -48,17 +48,10 @@ namespace EF03
 
             var department = context.Departments.FirstOrDefault(d => d.Id == 100);
 
-            context.Entry(department).Collection(D => D.Employees).Load(); // Explicit 
-
-            Console.WriteLine(department.Name);
-
-            foreach (var item in department.Employees)
-            {
-                Console.WriteLine(item.Name);
-            }
 
 
-            // 1. Explicit Loading  
+
+
         }
     }
 }
