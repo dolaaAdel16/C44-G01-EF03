@@ -96,7 +96,35 @@ namespace EF03
             //within the same query - one request (subquery join)
 
 
-           
+            // 3. Lazy Loading
+            // 3.1. install proxies
+            // 3.2. Update OnConfiguring() , Use LazyLoadingProxies
+            // 3.3. Make all entities public  
+            // 3.4. Make all navigational properties virtual
+
+
+            //var employee = context.Employees.Include(E => E.WorkFor).FirstOrDefault(e => e.Id == 10);
+
+
+            //Console.WriteLine(employee?.Id ?? 0);
+            //Console.WriteLine(employee?.Name ?? "NA");
+            //Console.WriteLine(employee?.Salary ?? 0.0f);
+            //Console.WriteLine(employee?.Address ?? "NA");
+            //Console.WriteLine(employee?.DeptId ?? 0);
+            //Console.WriteLine(employee?.HiringDate ?? DateTime.Now);
+            //Console.WriteLine(employee?.WorkFor?.Name ?? "NA");
+
+
+            //var department = context.Departments.FirstOrDefault(d => d.Id == 100);
+
+            //Console.WriteLine(department.Name); 
+
+            //foreach (var item in department.Employees)
+            //{
+            //    Console.WriteLine(item.Name);
+            //}
+
+
 
 
         }
