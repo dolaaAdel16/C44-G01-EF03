@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF03", "EF03\EF03.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheiratenceExample", "InheiratenceExample\InheiratenceExample.csproj", "{5D03DE7A-3447-46C7-915E-94F01E76D63C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB First", "DB First\DB First.csproj", "{AC845A0C-D03F-4B89-9918-49E6207931E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB First Using EF Core Power Tools", "DB First Using EF Core Power Tools\DB First Using EF Core Power Tools.csproj", "{3341EF93-8CD7-45BF-A3DA-0CFD94B4432A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{5D03DE7A-3447-46C7-915E-94F01E76D63C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D03DE7A-3447-46C7-915E-94F01E76D63C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D03DE7A-3447-46C7-915E-94F01E76D63C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC845A0C-D03F-4B89-9918-49E6207931E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC845A0C-D03F-4B89-9918-49E6207931E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC845A0C-D03F-4B89-9918-49E6207931E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC845A0C-D03F-4B89-9918-49E6207931E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3341EF93-8CD7-45BF-A3DA-0CFD94B4432A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3341EF93-8CD7-45BF-A3DA-0CFD94B4432A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3341EF93-8CD7-45BF-A3DA-0CFD94B4432A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3341EF93-8CD7-45BF-A3DA-0CFD94B4432A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
