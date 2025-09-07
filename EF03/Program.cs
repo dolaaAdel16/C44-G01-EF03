@@ -170,7 +170,6 @@ namespace EF03
 
             Console.WriteLine(result.Name);
 
-            context.SaveChanges();  
 
 
         }
