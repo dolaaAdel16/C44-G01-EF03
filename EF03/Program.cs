@@ -10,25 +10,25 @@ namespace EF03
         {
             using AppDbContext context = new AppDbContext();
 
-            //var department = new List<Department>()
-            //{
-            //    new Department { Name = "HR" },
-            //    new Department { Name = "IT" },
-            //    new Department { Name = "PR" }
-            //};
+            var department = new List<Department>()
+            {
+                new Department { Name = "HR" },
+                new Department { Name = "IT" },
+                new Department { Name = "PR" }
+            };
 
 
-            //var employees = new List<Employee>()
-            //{
-            //    new Employee { Name = "Alice Bob", Address = "Cairo" , Age = 29 , Salary = 12000 , DeptId = 100 },
-            //    new Employee { Name = "Bob Cody", Address = "Alex" , Age = 27 , Salary = 15000 , DeptId = 100 },
-            //    new Employee { Name = "Taylor Durden", Address = "Giza" , Age = 30 , Salary = 18000 , DeptId = 100 },
-            //    new Employee { Name = "Ahmed Adel", Address = "Giza" , Age = 24 , Salary = 14000 , DeptId = 200 },
-            //    new Employee { Name = "Ahmed Khaled ", Address = "Cairo" , Age = 20 , Salary = 13000 , DeptId = 200 },
-            //    new Employee { Name = "Salah Adel", Address = "Alex" , Age = 32 , Salary = 17000 , DeptId = 300 },
-            //    new Employee { Name = "Ali Ahmed", Address = "Alex" , Age = 22 , Salary = 15000 , DeptId = 100 },
+            var employees = new List<Employee>()
+            {
+                new Employee { Name = "Alice Bob", Address = "Cairo" , Age = 29 , Salary = 12000 , DeptId = 100 },
+                new Employee { Name = "Bob Cody", Address = "Alex" , Age = 27 , Salary = 15000 , DeptId = 100 },
+                new Employee { Name = "Taylor Durden", Address = "Giza" , Age = 30 , Salary = 18000 , DeptId = 100 },
+                new Employee { Name = "Ahmed Adel", Address = "Giza" , Age = 24 , Salary = 14000 , DeptId = 200 },
+                new Employee { Name = "Ahmed Khaled ", Address = "Cairo" , Age = 20 , Salary = 13000 , DeptId = 200 },
+                new Employee { Name = "Salah Adel", Address = "Alex" , Age = 32 , Salary = 17000 , DeptId = 300 },
+                new Employee { Name = "Ali Ahmed", Address = "Alex" , Age = 22 , Salary = 15000 , DeptId = 100 },
 
-            //};  
+            };
 
             //context.Departments.AddRange(department);
             //context.Employees.AddRange(employees);
@@ -123,6 +123,38 @@ namespace EF03
             //{
             //    Console.WriteLine(item.Name);
             //}
+
+            //Jopin Operators
+
+
+            // Fluent Syntax
+            var result = context.Employees.Join(context.Departments, E => E.DeptId, D => D.Id, (E, D) => new
+            {
+                EmpId = E.Id,
+                EmpName = E.Name,
+                DeptId = D.Id,
+                DeptName = D.Name 
+
+            });
+
+            // Query Expression
+
+            result = from E in context.Employees
+                     join D in context.Departments
+                     on E.DeptId equals D.Id
+                     where D.Name == "HR"
+                     select new
+                     {
+                         EmpId = E.Id,
+                         EmpName = E.Name,
+                         DeptId = D.Id,
+                         DeptName = D.Name
+                     };
+
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
 
 
 
