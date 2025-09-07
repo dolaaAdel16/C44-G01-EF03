@@ -191,7 +191,12 @@ namespace EF03
             //context.Employees.Local.Any();
             //context.Employees.Local.Any();
 
-
+            var result = context.Employees.FromSqlRaw("Select * From DepartmentManagersView");
+             
+            foreach(var item in result)
+            {
+                Console.WriteLine(item.Name);
+            }
 
         }
     }

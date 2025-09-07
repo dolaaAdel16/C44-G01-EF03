@@ -16,6 +16,8 @@ namespace EF03.Contexts
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
+            modelBuilder.Entity<DepartmentMnager>().ToView("DepartmentMangersView").HasNoKey();
+
             base.OnModelCreating(modelBuilder);
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -28,5 +30,8 @@ namespace EF03.Contexts
         public DbSet<Employee> Employees { get; set; }  
 
         public DbSet<Department> Departments { get; set; }
+
+        public DbSet<DepartmentMnager> DepartmentMnagers { get; set; }  
     }
+
 }
