@@ -151,10 +151,6 @@ namespace EF03
                          DeptName = D.Name
                      };
 
-            foreach (var item in result)
-            {
-                Console.WriteLine(item);
-            }
 
 
 
