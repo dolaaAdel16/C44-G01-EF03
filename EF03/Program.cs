@@ -159,16 +159,37 @@ namespace EF03
             //Tracking Vs NoTracking
             using AppDbContext context = new AppDbContext();
 
-            var result = context.Employees.AsNoTracking().FirstOrDefault(E => E.Id ==10);
+            //var result = context.Employees.AsNoTracking().FirstOrDefault(E => E.Id ==10);
 
-            Console.WriteLine(context.Entry(result).State);
+            //Console.WriteLine(context.Entry(result).State);
 
-            result.Name = "Ali";
+            //result.Name = "Ali";
 
-            Console.WriteLine(context.Entry(result).State);
+            //Console.WriteLine(context.Entry(result).State);
 
 
-            Console.WriteLine(result.Name);
+            //Console.WriteLine(result.Name);
+
+            //context.SaveChanges();  
+
+            //Remotly
+            //context.Employees.Any();
+            //context.Employees.Any();
+            //context.Employees.Any();
+            //context.Employees.Any();
+            //context.Employees.Any();
+            //context.Employees.Any();
+            //context.Employees.Any();
+
+            //context.Employees.Load();
+
+            //context.Employees.Local.Any();
+            //context.Employees.Local.Any();
+            //context.Employees.Local.Any();
+            //context.Employees.Local.Any();
+            //context.Employees.Local.Any();
+            //context.Employees.Local.Any();
+            //context.Employees.Local.Any();
 
 
 
