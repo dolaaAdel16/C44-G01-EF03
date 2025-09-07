@@ -8,7 +8,7 @@ namespace EF03
     {
         static void Main(string[] args)
         {
-            using AppDbContext context = new AppDbContext();
+            //using AppDbContext context = new AppDbContext();
 
             var department = new List<Department>()
             {
@@ -128,35 +128,49 @@ namespace EF03
 
 
             // Fluent Syntax
-            var result = context.Employees.Join(context.Departments, E => E.DeptId, D => D.Id, (E, D) => new
-            {
-                EmpId = E.Id,
-                EmpName = E.Name,
-                DeptId = D.Id,
-                DeptName = D.Name 
+            //var result = context.Employees.Join(context.Departments, E => E.DeptId, D => D.Id, (E, D) => new
+            //{
+            //    EmpId = E.Id,
+            //    EmpName = E.Name,
+            //    DeptId = D.Id,
+            //    DeptName = D.Name 
 
-            });
+            //});
 
             // Query Expression
 
-            result = from E in context.Employees
-                     join D in context.Departments
-                     on E.DeptId equals D.Id
-                     where D.Name == "HR"
-                     select new
-                     {
-                         EmpId = E.Id,
-                         EmpName = E.Name,
-                         DeptId = D.Id,
-                         DeptName = D.Name
-                     };
+            //result = from E in context.Employees
+            //         join D in context.Departments
+            //         on E.DeptId equals D.Id
+            //         where D.Name == "HR"
+            //         select new
+            //         {
+            //             EmpId = E.Id,
+            //             EmpName = E.Name,
+            //             DeptId = D.Id,
+            //             DeptName = D.Name
+            //         };
 
-            foreach (var item in result)
-            {
-                Console.WriteLine(item);
-            }
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //Tracking Vs NoTracking
+            using AppDbContext context = new AppDbContext();
+
+            var result = context.Employees.AsNoTracking().FirstOrDefault(E => E.Id ==10);
+
+            Console.WriteLine(context.Entry(result).State);
+
+            result.Name = "Ali";
+
+            Console.WriteLine(context.Entry(result).State);
 
 
+            Console.WriteLine(result.Name);
+
+            context.SaveChanges();  
 
 
         }
