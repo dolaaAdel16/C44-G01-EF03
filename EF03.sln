@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB First", "DB First\DB Fir
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB First Using EF Core Power Tools", "DB First Using EF Core Power Tools\DB First Using EF Core Power Tools.csproj", "{3341EF93-8CD7-45BF-A3DA-0CFD94B4432A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBFirstPowerToolsTested", "DBFirstPowerToolsTested\DBFirstPowerToolsTested.csproj", "{4D959D9A-DBCA-45E0-BBEA-8ABAC1FFDD27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{3341EF93-8CD7-45BF-A3DA-0CFD94B4432A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3341EF93-8CD7-45BF-A3DA-0CFD94B4432A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3341EF93-8CD7-45BF-A3DA-0CFD94B4432A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D959D9A-DBCA-45E0-BBEA-8ABAC1FFDD27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D959D9A-DBCA-45E0-BBEA-8ABAC1FFDD27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D959D9A-DBCA-45E0-BBEA-8ABAC1FFDD27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D959D9A-DBCA-45E0-BBEA-8ABAC1FFDD27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
